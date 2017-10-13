@@ -1,0 +1,1 @@
+mongo data file ad daemon is one file up from workspace, run it using "./mongod"
