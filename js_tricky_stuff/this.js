@@ -2,7 +2,7 @@
 
 // this is original set by default to the global object
 // which in the browser will be window
-console.log(window.this === this);
+// console.log(window.this === this);
 
 
 function badIdea() {
@@ -38,9 +38,13 @@ var person = {
 }
 
 // call method will pass in what we want this to equal in the method
-person.dog.sayHello.call(person);
+console.log(person.dog.sayHello.call(person));
 
 // apply pretty damn similar to call just args are in a list instead of comma separated
-person.dog.add_numbers(1,2,3,4);
-person.dog.add_numbers.call(person,1,2,3,4);
-person.dog.add_numbers.apply(person[1,2,3,4]);
+console.log(person.dog.add_numbers(1,2,3,4));
+console.log(person.dog.add_numbers.call(person,1,2,3,4));
+console.log(person.dog.add_numbers.apply(person,[1,2,3,4]));
+
+// Bind you can add the rest of your params later
+var calc = person.dog.add_numbers.bind(person,1,2);
+console.log(calc(3,4))
