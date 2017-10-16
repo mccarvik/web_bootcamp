@@ -30,6 +30,17 @@ var person = {
         },
         determine_cont: function(){
             return this === person;
+        },
+        add_numbers: function(a,b,c,d){
+            return this.first_name + " just calculated " + (a+b+c+d);
         }
     }
 }
+
+// call method will pass in what we want this to equal in the method
+person.dog.sayHello.call(person);
+
+// apply pretty damn similar to call just args are in a list instead of comma separated
+person.dog.add_numbers(1,2,3,4);
+person.dog.add_numbers.call(person,1,2,3,4);
+person.dog.add_numbers.apply(person[1,2,3,4]);
