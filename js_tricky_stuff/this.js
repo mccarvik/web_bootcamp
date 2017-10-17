@@ -48,3 +48,10 @@ console.log(person.dog.add_numbers.apply(person,[1,2,3,4]));
 // Bind you can add the rest of your params later
 var calc = person.dog.add_numbers.bind(person,1,2);
 console.log(calc(3,4))
+
+
+// Refers to an object when the 'new' keyword is used
+function Person(first_name, last_name) {
+    this.first_name = first_name;
+    this.last_name = last_name;
+}
