@@ -1,1 +1,2 @@
 mongo data file ad daemon is one file up from workspace, run it using "./mongod"
+if "unclean shutdown detected", just run "./mongodb --repair" and then run ./mongodb
